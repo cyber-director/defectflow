@@ -7,8 +7,8 @@
     "2": "cracked_tiles",
     "3": "paint_peeling"
   },
-  "sha256_onnx": "273fae0d20787a383ab10c4ca89924124b994caf0de0f964aa8cca3bdba712f1",
-  "training_date": "2026-09-03T11:25:03.331398",
+  "sha256_onnx": "eac71aa159786467475baa14557559f11d97cd4eca3f4adf6fbcd44f3cf438ae",
+  "training_date": "2026-09-03T12:00:20.181785",
   "training_sources": [
     "Spalling and exposed rebar.v1i.yolov8-obb.zip",
     "water.zip",
@@ -19,8 +19,8 @@
   "dynamic": false,
   "builtInNms": false,
   "validation_metrics": {
-    "mAP50": 0.4141481916354338,
-    "mAP50-95": 0.20035719620636291
+    "mAP50": 0.3865903214583951,
+    "mAP50-95": 0.18776622861284448
   },
   "known_limitations": "Trained for only 3 epochs due to time constraints."
 }
