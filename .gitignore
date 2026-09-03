@@ -43,3 +43,4 @@ ml/*.pth
 /models/*.onnx
 /public/models/*.onnx
 /models/metadata.json
+ml/venv/

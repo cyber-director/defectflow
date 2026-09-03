@@ -1,0 +1,10 @@
+{
+  "mAP50": 0.4141481916354338,
+  "mAP50-95": 0.20035719620636291,
+  "classes": {
+    "0": "spalling",
+    "1": "stagnant_water",
+    "2": "cracked_tiles",
+    "3": "paint_peeling"
+  }
+}

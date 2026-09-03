@@ -1,0 +1,52 @@
+{
+  "total_images": {
+    "train": 4816,
+    "val": 1031,
+    "test": 1031
+  },
+  "positive_images": {
+    "0": {
+      "train": 599,
+      "val": 128,
+      "test": 128
+    },
+    "1": {
+      "train": 1286,
+      "val": 275,
+      "test": 275
+    },
+    "2": {
+      "train": 2800,
+      "val": 600,
+      "test": 600
+    },
+    "3": {
+      "train": 131,
+      "val": 28,
+      "test": 28
+    }
+  },
+  "box_counts": {
+    "0": {
+      "train": 871,
+      "val": 185,
+      "test": 222
+    },
+    "1": {
+      "train": 2972,
+      "val": 637,
+      "test": 652
+    },
+    "2": {
+      "train": 15188,
+      "val": 3200,
+      "test": 3141
+    },
+    "3": {
+      "train": 157,
+      "val": 34,
+      "test": 34
+    }
+  },
+  "errors": []
+}
