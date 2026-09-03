@@ -47,8 +47,8 @@ export function labelFor(defect: DefectType): string {
 /** Model class index → defect type. Must match ml/configs/defects.yaml
  *  and the exported ONNX model's output ordering exactly. */
 export const CLASS_INDEX: Record<number, DefectType> = {
-  0: 'spalling',
+  0: 'paint_peeling',
   1: 'stagnant_water',
   2: 'cracked_tiles',
-  3: 'paint_peeling',
+  3: 'spalling',
 }
