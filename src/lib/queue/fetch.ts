@@ -12,7 +12,7 @@ export async function attachQueuePositions(
   complaints: Complaint[]
 ): Promise<Map<string, number>> {
   const active = complaints.filter((c) => c.status !== 'Resolved')
-  const categories = [...new Set(active.map((c) => c.category))] as StaffCategory[]
+  const categories = Array.from(new Set(active.map((c) => c.category))) as StaffCategory[]
 
   const rows = await Promise.all(
     categories.map((category) =>

@@ -7,6 +7,7 @@
 import 'server-only'
 import { existsSync } from 'node:fs'
 import path from 'node:path'
+// @ts-ignore
 import * as ort from 'onnxruntime-node'
 import sharp from 'sharp'
 import { computeLetterbox, rgbBytesToNchwTensor, MODEL_INPUT_SIZE } from '../preprocess'
@@ -37,7 +38,7 @@ function getSession(): Promise<ort.InferenceSession> {
       executionProviders: ['cpu'],
     })
   }
-  return sessionPromise
+  return sessionPromise as any
 }
 
 async function runRealModel(buffer: Buffer) {
