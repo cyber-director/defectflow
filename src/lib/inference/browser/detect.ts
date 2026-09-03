@@ -16,7 +16,7 @@ import { aggregateDetections } from '../aggregate'
 import { DEFECT_TYPES } from '@/config/defects'
 import type { DetectorOutput } from '@/types/domain'
 
-const MODEL_URL = process.env.NEXT_PUBLIC_MODEL_URL || '/models/defect_detector.onnx?v=3'
+const MODEL_URL = process.env.NEXT_PUBLIC_MODEL_URL || '/models/defect_detector.onnx?v=4'
 const MODEL_VERSION = process.env.NEXT_PUBLIC_MODEL_VERSION || '1.0.0'
 
 let sessionPromise: Promise<any> | null = null
