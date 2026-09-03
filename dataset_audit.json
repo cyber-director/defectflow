@@ -1,0 +1,65 @@
+{
+  "total_images": {
+    "train": 2130,
+    "val": 456,
+    "test": 456
+  },
+  "classes": {
+    "spalling": {
+      "train": {
+        "images": 599,
+        "boxes": 897
+      },
+      "val": {
+        "images": 128,
+        "boxes": 174
+      },
+      "test": {
+        "images": 128,
+        "boxes": 207
+      }
+    },
+    "stagnant_water": {
+      "train": {
+        "images": 700,
+        "boxes": 1619
+      },
+      "val": {
+        "images": 150,
+        "boxes": 357
+      },
+      "test": {
+        "images": 150,
+        "boxes": 380
+      }
+    },
+    "cracked_tiles": {
+      "train": {
+        "images": 700,
+        "boxes": 3531
+      },
+      "val": {
+        "images": 150,
+        "boxes": 768
+      },
+      "test": {
+        "images": 150,
+        "boxes": 946
+      }
+    },
+    "paint_peeling": {
+      "train": {
+        "images": 131,
+        "boxes": 157
+      },
+      "val": {
+        "images": 28,
+        "boxes": 36
+      },
+      "test": {
+        "images": 28,
+        "boxes": 32
+      }
+    }
+  }
+}
