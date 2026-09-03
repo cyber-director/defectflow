@@ -40,7 +40,7 @@ export async function POST(request: Request) {
   }
 
   const admin = createAdminClient()
-  const { data: complaint } = await admin
+  const { data: complaint }: any = await admin
     .from('complaints')
     .select('id, status, category, assigned_staff_id')
     .eq('id', complaintId)
@@ -49,12 +49,12 @@ export async function POST(request: Request) {
   if (!complaint) {
     return NextResponse.json({ error: 'Complaint not found.' }, { status: 404 })
   }
-  if (complaint.category !== profile.staff_category) {
+  if ((complaint as any).category !== profile.staff_category) {
     return NextResponse.json({ error: 'This complaint is outside your category.' }, { status: 403 })
   }
-  if (!canTransition(complaint.status, newStatus)) {
+  if (!canTransition((complaint as any).status, newStatus)) {
     return NextResponse.json(
-      { error: `Cannot move a complaint from ${complaint.status} to ${newStatus}.` },
+      { error: `Cannot move a complaint from ${(complaint as any).status} to ${newStatus}.` },
       { status: 400 }
     )
   }

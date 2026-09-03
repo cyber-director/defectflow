@@ -53,7 +53,7 @@ export async function POST(request: Request) {
       .eq('client_request_id', clientRequestId)
       .maybeSingle()
     if (existing) {
-      return NextResponse.json({ id: existing.id, deduplicated: true })
+      return NextResponse.json({ id: (existing as any).id, deduplicated: true })
     }
   }
 
@@ -103,7 +103,7 @@ export async function POST(request: Request) {
     )
   }
 
-  const { error: insertError } = await admin.from('complaints').insert({
+  const { error: insertError } = await (admin.from('complaints') as any).insert({
     id: complaintId,
     reporter_id: user.id,
     reporter_name: reporterName,
@@ -140,7 +140,7 @@ export async function POST(request: Request) {
   // Initial timeline events. Later status-change events are written
   // automatically by the complaints_status_change trigger
   // (008_triggers.sql) — only these first three need to happen here.
-  await admin.from('ticket_updates').insert([
+  await (admin.from('ticket_updates') as any).insert([
     { complaint_id: complaintId, type: 'system', message: 'Complaint submitted' },
     {
       complaint_id: complaintId,
