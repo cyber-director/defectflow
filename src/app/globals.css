@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+
+
+html, body {
+  background: #f4f6f5; /* --background, CLAUDE.md §11 */
+  color: #1f2925;      /* --text-primary */
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d7dcda; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #8a938f; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface border border-border rounded-xl shadow-sm;
+  }
+  .input-field {
+    @apply w-full bg-surface border border-border rounded-lg px-3 py-2.5 sm:py-2 text-sm text-ink-primary placeholder-ink-muted transition-all focus:outline-none focus:border-brand-700 focus:ring-4 focus:ring-brand-700/10;
+  }
+  .btn-primary {
+    @apply bg-brand-900 hover:bg-brand-800 text-white font-medium rounded-lg px-4 py-2.5 sm:py-2 text-sm shadow-sm transition-all hover:shadow-md active:scale-[0.98] disabled:opacity-60 disabled:hover:shadow-sm disabled:active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-700 focus-visible:ring-offset-2;
+  }
+  .btn-secondary {
+    @apply bg-white hover:bg-surface-muted text-ink-primary border border-border rounded-lg px-4 py-2.5 sm:py-2 text-sm shadow-sm transition-all hover:shadow-md active:scale-[0.98] disabled:opacity-60 disabled:hover:shadow-sm disabled:active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-700 focus-visible:ring-offset-2;
+  }
+}

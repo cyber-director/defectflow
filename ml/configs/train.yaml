@@ -1,0 +1,14 @@
+# Training hyperparameters. Adjust epochs/batch/device for your
+# hardware — these are reasonable starting defaults for a small,
+# 4-class dataset, not tuned numbers.
+
+model: yolov8n.pt   # smallest Ultralytics checkpoint — fast enough for CPU inference at serve time
+data: defects.yaml
+imgsz: 512           # must match src/lib/inference/preprocess.ts's MODEL_INPUT_SIZE
+epochs: 100
+batch: 16
+patience: 20         # early stopping
+device: 0            # set to 'cpu' if you don't have a GPU available
+project: ../runs
+name: defectflow
+seed: 42

@@ -1,0 +1,9 @@
+# Pin whatever versions you actually train with, and record them in
+# your final report — an ONNX export from a different Ultralytics
+# version can change the output tensor layout that
+# src/lib/inference/postprocess.ts assumes. These are starting points;
+# verify against what's current when you actually install.
+ultralytics==8.2.103
+onnx==1.16.2
+onnxruntime==1.19.2
+pyyaml==6.0.2

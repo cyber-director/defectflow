@@ -1,0 +1,16 @@
+# Ultralytics dataset config for the 4 DefectFlow classes.
+#
+# Class order MUST exactly match src/config/defects.ts's CLASS_INDEX —
+# changing one without the other silently breaks routing/priority for
+# every future submission.
+
+path: ../dataset  # relative to this file — see ml/scripts/prepare_dataset.py
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: spalling
+  1: stagnant_water
+  2: cracked_tiles
+  3: paint_peeling
