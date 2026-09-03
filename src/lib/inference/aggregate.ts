@@ -31,7 +31,7 @@ export function aggregateDetections(
     byClass.set(d.defect, list)
   }
 
-  const classSummaries = [...byClass.entries()].map(([defect, group]) => ({
+  const classSummaries = Array.from(byClass.entries()).map(([defect, group]) => ({
     defect,
     totalExtent: Math.min(1, group.reduce((sum, d) => sum + d.areaRatio, 0)),
     largestRegion: Math.max(...group.map((d) => d.areaRatio)),

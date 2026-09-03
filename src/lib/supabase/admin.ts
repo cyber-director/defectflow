@@ -35,5 +35,5 @@ export function createAdminClient() {
       }
     )
   }
-  return adminClient
+  return adminClient as any
 }
